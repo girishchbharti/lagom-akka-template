@@ -20,7 +20,7 @@ trait ProcessorApplicationComponents extends LagomServerComponents with Cassandr
 
   implicit def executionContext: ExecutionContext
 
-  override lazy val lagomServer = serverFor[ProcessorService](wire[ProcessorServiceImpl])
+  override lazy val lagomServer: LagomServer = serverFor[ProcessorService](wire[ProcessorServiceImpl])
 
   lazy val jsonSerializerRegistry: JsonSerializerRegistry = SerializationRegistry
 

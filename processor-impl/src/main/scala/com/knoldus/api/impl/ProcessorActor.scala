@@ -14,7 +14,7 @@ class ProcessorActor extends Actor {
       case pum: ProcessUserMessage =>
         println("Message found by actor : " + pum)
 
-      case msg => println(s"Got unknopwn message : $msg")
+      case msg => println(s"Got unknown message : $msg")
     }
 
   }
